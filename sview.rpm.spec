@@ -1,6 +1,6 @@
 Name:           sview
 Version:        20.08
-Release:        1-24e7c32
+Release:        1
 Summary:        stereoscopic media player sView
 
 License:        GPLv3

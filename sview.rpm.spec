@@ -6,7 +6,7 @@ Summary:        stereoscopic media player sView
 
 License:        GPLv3
 URL:            https://sview.ru/en/
-Source0:        https://github.com/gkv311/sview/archive/%{commit_id}.zip
+Source0:        https://github.com/gkv311/%{name}/archive/%{commit_id}.zip
 
 BuildRequires:  ffmpeg-free-devel
 BuildRequires:  libconfig-devel
@@ -28,13 +28,13 @@ Requires OpenGL2.0+ for rendering and OpenAL for sound output.
 make %{?_smp_mflags} INC='-I3rdparty/include -Iinclude -I/usr/include/ffmpeg' all
 
 %install
-make DESTDIR=%{buildroot} USR_LIB=%{buildroot}/%{_libdir} install
+make DESTDIR=%{buildroot} USR_LIB=%{_libdir} install
 
 %files
 %defattr(-,root,root)
 %license %{_datadir}/sView/info/license.txt
 %{_bindir}/sView
-%{_libdir}/sView/*
+%{_libdir}/*
 %{_datadir}/sView/*
 
 %clean

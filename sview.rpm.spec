@@ -1,6 +1,6 @@
 Name:           sview
 Version:        20.08
-Release:        1
+Release:        1%{?dist}
 %global commit_id 24e7c3219ca5ad6c512ba094b40bd500584e8a86
 Summary:        stereoscopic media player sView
 
@@ -29,17 +29,13 @@ make %{?_smp_mflags} INC='-I3rdparty/include -Iinclude -I/usr/include/ffmpeg' al
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make DESTDIR=$RPM_BUILD_ROOT USR_LIB=%{_lib} install
+make DESTDIR=%{_prefix} USR_LIB=%{_libdir} install
 
 %files
 %defattr(-,root,root)
+%licence {_datadir}/sView/info/license.txt
 %{_bindir}/sView
 %{_libdir}/sView/*
-%{_datadir}/application-registry/sView.applications
-%{_datadir}/applications/sViewIV.desktop
-%{_datadir}/applications/sViewMP.desktop
-%{_datadir}/menu/sViewIV
-%{_datadir}/menu/sViewMP
 %{_datadir}/sView/*
 
 %clean

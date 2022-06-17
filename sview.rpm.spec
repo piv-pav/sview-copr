@@ -25,7 +25,7 @@ Requires: ffmpeg
 Requires: libconfig
 Requires: libgcc
 Requires: libstdc++
-Requires: libswscale-free
+Requires: libswscale
 Requires: openal-soft
 Requires: pango
 

@@ -1,11 +1,12 @@
 Name:           sview
 Version:        20.08
 Release:        1
+%global commit_id 24e7c3219ca5ad6c512ba094b40bd500584e8a86
 Summary:        stereoscopic media player sView
 
 License:        GPLv3
 URL:            https://sview.ru/en/
-Source0:        https://github.com/gkv311/sview/archive/24e7c3219ca5ad6c512ba094b40bd500584e8a86.zip
+Source0:        https://github.com/gkv311/sview/archive/%{commit_id}.zip
 
 BuildRequires:  ffmpeg-free-devel
 BuildRequires:  libconfig-devel
@@ -21,8 +22,7 @@ sView is a stereoscopic Image Viewer and Movie Player.
 Requires OpenGL2.0+ for rendering and OpenAL for sound output.
 
 %prep
-# %autosetup
-%setup -c -n %{name}-%{version}-%{release}
+%setup -c -n %{name}-%{commit_id}
 
 %build
 make %{?_smp_mflags} INC='-I3rdparty/include -Iinclude -I/usr/include/ffmpeg' all
@@ -34,14 +34,14 @@ make DESTDIR=$RPM_BUILD_ROOT USR_LIB=%{_lib} install
 %files
 %license docs/LICENSE
 %defattr(-,root,root)
-/usr/bin/sView
-/usr/%{_lib}/sView/*
-/usr/share/application-registry/sView.applications
-/usr/share/applications/sViewIV.desktop
-/usr/share/applications/sViewMP.desktop
-/usr/share/menu/sViewIV
-/usr/share/menu/sViewMP
-/usr/share/sView/*
+%{_bindir}/sView
+%{_libdir}/sView/*
+%{_datadir}/application-registry/sView.applications
+%{_datadir}/applications/sViewIV.desktop
+%{_datadir}/applications/sViewMP.desktop
+%{_datadir}/menu/sViewIV
+%{_datadir}/menu/sViewMP
+%{_datadir}/sView/*
 
 %clean
 make clean

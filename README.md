@@ -1,6 +1,6 @@
 # sView COPR
 
-RPM Specfile for [sView](https://www.sview.ru/en/) stereoscopic player to build for using [COPR](https://copr.fedorainfracloud.org).
+RPM Specfile for [sView](https://www.sview.ru/en/) stereoscopic player to build using [COPR](https://copr.fedorainfracloud.org).
 
 You can install sView from COPR by running following commands
 

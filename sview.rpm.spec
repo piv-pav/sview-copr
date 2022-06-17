@@ -21,7 +21,7 @@ Requires: libX11
 Requires: libXext
 Requires: libXpm
 Requires: libXrandr
-Requires: ffmpeg-free
+Requires: ffmpeg
 Requires: libconfig
 Requires: libgcc
 Requires: libstdc++
@@ -29,7 +29,7 @@ Requires: libswscale-free
 Requires: openal-soft
 Requires: pango
 
-BuildRequires:  ffmpeg-free-devel
+BuildRequires:  ffmpeg-devel
 BuildRequires:  libconfig-devel
 BuildRequires:  glew-devel
 BuildRequires:  openal-soft-devel

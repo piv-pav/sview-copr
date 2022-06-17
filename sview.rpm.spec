@@ -48,9 +48,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 ldconfig
-
-%changelog
-* Fri June 17 2022 Pavel Pivovarov
-- Updated to build on Fedora 36
-* Sat May 19 2012 Kirill Gavrilov
-- Initial build

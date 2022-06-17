@@ -28,18 +28,18 @@ Requires OpenGL2.0+ for rendering and OpenAL for sound output.
 make %{?_smp_mflags} INC='-I3rdparty/include -Iinclude -I/usr/include/ffmpeg' all
 
 %install
-make install
+make DESTDIR=%{buildroot} USR_LIB=%{buildroot}/%{_libdir} install
 
 %files
 %defattr(-,root,root)
-%licence {_datadir}/sView/info/license.txt
-%{_bindir}/sView
-%{_libdir}/sView/*
-%{_datadir}/sView/*
+%licence %{buildroot}/%{_datadir}/sView/info/license.txt
+%{buildroot}/%{_bindir}/sView
+%{buildroot}/%{_libdir}/sView/*
+%{buildroot}/%{_datadir}/sView/*
 
 %clean
 make clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %post
 ldconfig

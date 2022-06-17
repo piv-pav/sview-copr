@@ -8,6 +8,27 @@ License:        GPLv3
 URL:            https://sview.ru/en/
 Source0:        https://github.com/gkv311/%{name}/archive/%{commit_id}.zip
 
+Requires: atk
+Requires: cairo
+Requires: fontconfig
+Requires: freetype
+Requires: gdk-pixbuf2
+Requires: glib2
+Requires: glibc
+Requires: gtk2
+Requires: harfbuzz
+Requires: libX11
+Requires: libXext
+Requires: libXpm
+Requires: libXrandr
+Requires: ffmpeg-free
+Requires: libconfig
+Requires: libgcc
+Requires: libstdc++
+Requires: libswscale-free
+Requires: openal-soft
+Requires: pango
+
 BuildRequires:  ffmpeg-free-devel
 BuildRequires:  libconfig-devel
 BuildRequires:  glew-devel
@@ -21,6 +42,8 @@ BuildRequires:  gcc-c++
 sView is a stereoscopic Image Viewer and Movie Player.
 Requires OpenGL2.0+ for rendering and OpenAL for sound output.
 
+%global debug_package %{nil}
+
 %prep
 %setup -n %{name}-%{commit_id}
 
@@ -32,10 +55,10 @@ make DESTDIR=%{buildroot} USR_LIB=%{_lib} install
 
 %files
 %defattr(-,root,root)
-%license %{_datadir}/sView/info/license.txt
 %{_bindir}/sView
 %{_libdir}/*
-%{_datadir}/sView/*
+%{_datadir}/*
+%license %{_datadir}/sView/info/license.txt
 
 %clean
 make clean

@@ -22,7 +22,7 @@ sView is a stereoscopic Image Viewer and Movie Player.
 Requires OpenGL2.0+ for rendering and OpenAL for sound output.
 
 %prep
-%setup -c -n %{name}-%{commit_id}
+%setup -n %{name}-%{commit_id}
 
 %build
 make %{?_smp_mflags} INC='-I3rdparty/include -Iinclude -I/usr/include/ffmpeg' all

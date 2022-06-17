@@ -5,7 +5,7 @@ Summary:        stereoscopic media player sView
 
 License:        GPLv3
 URL:            https://sview.ru/en/
-Source0:        https://github.com/gkv311/sview/archive/24e7c3219ca5ad6c512ba094b40bd500584e8a86.tar.gz
+Source0:        https://github.com/gkv311/sview/archive/24e7c3219ca5ad6c512ba094b40bd500584e8a86.zip
 
 BuildRequires:  ffmpeg-free-devel
 BuildRequires:  libconfig-devel
@@ -21,8 +21,8 @@ sView is a stereoscopic Image Viewer and Movie Player.
 Requires OpenGL2.0+ for rendering and OpenAL for sound output.
 
 %prep
-%autosetup
-# %setup -q -n %{name}-%{version}-%{release}
+# %autosetup
+%setup -c -n %{name}-%{version}-%{release}
 
 %build
 make %{?_smp_mflags} INC='-I3rdparty/include -Iinclude -I/usr/include/ffmpeg' all

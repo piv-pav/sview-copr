@@ -32,7 +32,6 @@ rm -rf $RPM_BUILD_ROOT
 make DESTDIR=$RPM_BUILD_ROOT USR_LIB=%{_lib} install
 
 %files
-%license docs/LICENSE
 %defattr(-,root,root)
 %{_bindir}/sView
 %{_libdir}/sView/*

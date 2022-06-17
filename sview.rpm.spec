@@ -8,6 +8,10 @@ License:        GPLv3
 URL:            https://sview.ru/en/
 Source0:        https://github.com/gkv311/%{name}/archive/%{commit_id}.zip
 
+Requires: pkgconfig(libavcodec)
+Requires: pkgconfig(libavformat)
+Requires: pkgconfig(libavutil)
+Requires: pkgconfig(libswscale)
 Requires: atk
 Requires: cairo
 Requires: fontconfig
@@ -21,21 +25,22 @@ Requires: libX11
 Requires: libXext
 Requires: libXpm
 Requires: libXrandr
-Requires: ffmpeg
 Requires: libconfig
 Requires: libgcc
 Requires: libstdc++
 Requires: openal-soft
 Requires: pango
 
-BuildRequires:  ffmpeg-devel
-BuildRequires:  libconfig-devel
-BuildRequires:  glew-devel
-BuildRequires:  openal-soft-devel
-BuildRequires:  gtk+-devel
-BuildRequires:  gtk2-devel
-BuildRequires:  libXpm-devel
-BuildRequires:  gcc-c++
+BuildRequires: pkgconfig(libavcodec)
+BuildRequires: pkgconfig(libavformat)
+BuildRequires: pkgconfig(libavutil)
+BuildRequires: libconfig-devel
+BuildRequires: glew-devel
+BuildRequires: openal-soft-devel
+BuildRequires: gtk+-devel
+BuildRequires: gtk2-devel
+BuildRequires: libXpm-devel
+BuildRequires: gcc-c++
 
 %description
 sView is a stereoscopic Image Viewer and Movie Player.

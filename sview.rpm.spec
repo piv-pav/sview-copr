@@ -32,10 +32,10 @@ make DESTDIR=%{buildroot} USR_LIB=%{buildroot}/%{_libdir} install
 
 %files
 %defattr(-,root,root)
-%licence %{buildroot}/%{_datadir}/sView/info/license.txt
-%{buildroot}/%{_bindir}/sView
-%{buildroot}/%{_libdir}/sView/*
-%{buildroot}/%{_datadir}/sView/*
+%license %{_datadir}/sView/info/license.txt
+%{_bindir}/sView
+%{_libdir}/sView/*
+%{_datadir}/sView/*
 
 %clean
 make clean

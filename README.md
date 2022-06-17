@@ -2,10 +2,6 @@
 
 RPM Specfile for [sView](https://www.sview.ru/en/) stereoscopic player to build for using [COPR](https://copr.fedorainfracloud.org).
 
-sView compiles using `ffmpeg` from [RPMFusion](https://rpmfusion.org/Configuration) instead of Fedora provided `ffmpeg-free`, hence you might need to install RPMFusion Free repository first.
-
-Alternatively you can replace `ffmpeg`, `ffmpeg-devel`, `libswscale` and `libswscale-devel` with `ffmpeg-free`, `ffmpeg-free-devel`, `libswscale-free` and `libswscale-free-devel` accordingly in spec file.
-
 You can install sView from COPR by running following commands
 
 ```bash

@@ -34,6 +34,7 @@ Requires: pango
 BuildRequires: pkgconfig(libavcodec)
 BuildRequires: pkgconfig(libavformat)
 BuildRequires: pkgconfig(libavutil)
+BuildRequires: pkgconfig(libswscale)
 BuildRequires: libconfig-devel
 BuildRequires: glew-devel
 BuildRequires: openal-soft-devel

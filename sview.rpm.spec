@@ -5,7 +5,7 @@ Summary:        stereoscopic media player sView
 
 License:        GPLv3
 URL:            https://sview.ru/en/
-Source0:        https://github.com/gkv311/sview/archive/24e7c3219ca5ad6c512ba094b40bd500584e8a86.zip
+Source0:        https://github.com/gkv311/sview/archive/24e7c3219ca5ad6c512ba094b40bd500584e8a86.tar.gz
 
 BuildRequires:  ffmpeg-free-devel
 BuildRequires:  libconfig-devel

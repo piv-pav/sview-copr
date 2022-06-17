@@ -28,7 +28,7 @@ Requires OpenGL2.0+ for rendering and OpenAL for sound output.
 make %{?_smp_mflags} INC='-I3rdparty/include -Iinclude -I/usr/include/ffmpeg' all
 
 %install
-make DESTDIR=%{buildroot} USR_LIB=%{_libdir} install
+make DESTDIR=%{buildroot} USR_LIB=%{_lib} install
 
 %files
 %defattr(-,root,root)

@@ -1,7 +1,7 @@
 Name:           sview
 Version:        20.08
 Release:        3
-%global commit_id d597a14b395645a43526d7c696e4b8c08e4eeb04
+%global commit_id 301eccf5f81e0483710e01ec477906a13fb8988b
 Summary:        stereoscopic media player sView
 
 License:        GPLv3
